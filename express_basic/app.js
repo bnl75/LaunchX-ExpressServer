@@ -25,8 +25,18 @@ app.get('/explorersInNode', (req, res) => {
     res.send(explorer);
 });
 
+/** QUERY PARAMS:
+    Sirve para recibir parámetros que vienen en la URL.
+    El objeto req contiene la propiedad params, esta propiedad
+    contiene los Query Params (parámetros) enviados por la url (req.params).
+*/
+//http://localhost:3000/explorers/diego
+//req.params = {"explorerName": "diego"};
+app.get('/explorers/:explorerName', (req, res) => {
+    res.send(req.params);
+});
+
 //Inicializo la app de Express:
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
-    
 });
