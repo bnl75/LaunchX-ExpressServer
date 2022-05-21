@@ -13,6 +13,12 @@ app.get('/', (req, res) => {
     res.send("Hello World!!!");
 });
 
+//Defino la ruta launchx (tipo GET):
+app.get('/launchx', (req, res) => {
+    // Mando como respuesta a la petición de la URL para la ruta raíz un hello world:
+    res.send("Bienvenidos a Launch X");
+});
+
 //Inicializo la app de Express:
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
