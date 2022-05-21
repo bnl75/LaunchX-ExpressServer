@@ -15,8 +15,14 @@ app.get('/', (req, res) => {
 
 //Defino la ruta launchx (tipo GET):
 app.get('/launchx', (req, res) => {
-    // Mando como respuesta a la petición de la URL para la ruta raíz un hello world:
     res.send("Bienvenidos a Launch X");
+});
+
+//Defino la ruta para regresar un objeto (tipo GET):
+app.get('/explorersInNode', (req, res) => {
+    // Creo objeto y lo mando como respuesta a la petición de la URL:
+    const explorer = {name: "Explorer", msg: "Hello"};
+    res.send(explorer);
 });
 
 //Inicializo la app de Express:
